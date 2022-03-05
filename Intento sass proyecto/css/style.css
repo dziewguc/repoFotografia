@@ -1,0 +1,224 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  color: white; }
+  header nav {
+    background-image: linear-gradient(to bottom, black, #424246);
+    width: 100%;
+    height: 100px; }
+    header nav .navbar-brand {
+      width: 25%; }
+      header nav .navbar-brand .logoindex {
+        width: 60%; }
+    header nav .navbar-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      header nav .navbar-nav .nav-item {
+        width: 100%;
+        height: 50px;
+        font-size: 30px; }
+
+a {
+  text-decoration: none; }
+
+img {
+  width: 30%;
+  height: 100%; }
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative; }
+  footer span {
+    display: flex;
+    flex-direction: row; }
+    footer span .face {
+      display: flex;
+      justify-content: flex-end; }
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center; }
+
+li {
+  width: 100%;
+  height: 50px;
+  font-size: 30px; }
+
+.main {
+  background-image: url("../img/Fondo.jpeg");
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 600px;
+  width: 100%; }
+  .main .mainImg {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+  .main .eventos {
+    display: flex;
+    flex-direction: column;
+    color: white; }
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  font-size: 40px; }
+
+img:hover {
+  transform: scale(1.2, 1.2); }
+
+.contacto {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column; }
+  .contacto form {
+    height: 800px;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    top: 30px;
+    align-content: center; }
+    .contacto form #Descripción {
+      height: 20%; }
+    .contacto form .btn {
+      font-size: 20px;
+      width: 10%; }
+
+.ayuda {
+  height: 600px;
+  width: 100%;
+  background-color: black;
+  color: white; }
+  .ayuda #preguntas {
+    width: 600px;
+    height: 100%;
+    position: relative;
+    top: 70px;
+    font-size: 20px; }
+
+.galeria {
+  background-color: black;
+  color: white;
+  height: 1000px;
+  width: 100%; }
+  .galeria .imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px 500px;
+    column-gap: 2%;
+    justify-items: center;
+    align-items: center;
+    align-content: center; }
+    .galeria .imagenes .img {
+      height: 80%;
+      width: 100%; }
+
+@media only screen and (max-width: 600px) {
+  header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    color: white; }
+    header .navbar {
+      width: 100%;
+      height: 100%; }
+      header .navbar .navbar-nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center; }
+        header .navbar .navbar-nav .nav-item {
+          width: 100%;
+          height: 20px;
+          font-size: 20px; }
+  img {
+    width: 100%;
+    height: 100%; }
+  .main {
+    background-image: url("../img/Fondo.jpeg");
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 75;
+    grid-template-areas: "h1" "img";
+    justify-items: center;
+    align-items: center;
+    height: 1000px;
+    width: 100%; }
+    .main .mainImg {
+      grid-area: img;
+      width: 100%;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; }
+  h1 {
+    display: grid;
+    grid-area: h1;
+    justify-items: center;
+    align-items: center;
+    font-size: 40px; }
+  .fotos {
+    width: 100%;
+    height: 300px; }
+  .galeria {
+    background-color: black;
+    color: white;
+    height: 2600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 95%;
+    grid-template-areas: "h1" "img"; }
+    .galeria .tituloGaleria {
+      grid-area: h1;
+      position: relative;
+      top: 0px; }
+    .galeria .imagenes {
+      grid-area: img;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .galeria .imagenes .img {
+        height: 30%;
+        width: 100%; } }
