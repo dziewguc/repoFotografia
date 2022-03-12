@@ -1,16 +1,20 @@
 *{  margin: 0px;
     padding: 0px;}
 
+$anchoTotal: 100%;
+$colorLetra:white;
+$colorFondo: black;
+
 header{
     display: flex;
     flex-direction: row;
-    width:100%;
+    width:$anchoTotal;
     height:100px;
-    color: white;
+    color: $colorLetra;
 
        nav{
         background-image: linear-gradient(to bottom, rgb(0, 0, 0),rgb(66, 66, 70) );
-        width: 100%;
+        width: $anchoTotal;
         height: 100px;
 
             .navbar-brand{
@@ -25,10 +29,10 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            width: $anchoTotal;
 
                 .nav-item{
-                width: 100%;
+                width: $anchoTotal;
                 height:50px;
                 font-size: 30px;
                 }
@@ -48,9 +52,9 @@ img{
 }
 
 footer{
-    background-color: black;
-    color: white;
-    width: 100%;
+    background-color: $colorFondo;
+    color: $colorLetra;
+    width: $anchoTotal;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -71,7 +75,7 @@ ul{
     list-style: none;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: $anchoTotal;
     height: 100px;
     justify-content: space-evenly;
     text-align: center;
@@ -79,10 +83,15 @@ ul{
     }
 
 li{
-    width: 100%;
+    width: $anchoTotal;
     height:50px;
     font-size: 30px;
     }
+
+@mixin estiloTitulo ($colorLetra, $tamanioLetra){
+    color: $colorLetra;
+    font-size: $tamanioLetra;
+}
 
 .main{
     background-image:url("../img/Fondo.jpeg");
@@ -92,10 +101,15 @@ li{
     justify-content: space-evenly;
     align-items: center;
     height: 600px;
-    width: 100%;
+    width: $anchoTotal;
+
+        .tituloServicio{
+            @include estiloTitulo (black, 40px)
+
+        }
 
         .mainImg{
-        width: 100%;
+        width: $anchoTotal;
         height: 50%;
         display: flex;
         flex-direction: row;
@@ -104,13 +118,13 @@ li{
         }
 
         .eventos{
-        display: flex;
-        flex-direction: column;
-        color: white;
-        }
+            display: flex;
+            flex-direction: column;
+            color: white;
+            }
 }
 
-h1{
+.titulo{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,14 +138,14 @@ img:hover{
 }
 
 .contacto{
-    background-color: black;
-    color: white;
+    background-color: $colorFondo;
+    color: $colorLetra;
     display: flex;
     flex-direction: column;
 
         form{
         height: 800px;
-        width: 100%;
+        width: $anchoTotal;
         font-size: 30px;
         display: flex;
         flex-direction: column;
@@ -154,9 +168,9 @@ img:hover{
 }
 
 .ayuda{height: 600px;
-    width: 100%;
-    background-color: black;
-    color: white;
+    width: $anchoTotal;
+    background-color: $colorFondo;
+    color: $colorLetra;
 
         #preguntas{
         width: 600px;
@@ -167,10 +181,14 @@ img:hover{
         }
 }
 
-.galeria{background-color: black;
-    color: white;
+.galeria{background-color: $colorFondo;
+    color: $colorLetra;
     height: 1000px;
-    width: 100%;
+    width: $anchoTotal;
+
+        .tituloGaleria{
+            @extend .titulo;
+        }
 
         .imagenes{
         display: grid;
@@ -183,7 +201,7 @@ img:hover{
 
             .img{
             height: 80%;
-            width: 100%;
+            width: $anchoTotal;
             }
         }
 }
@@ -191,26 +209,26 @@ img:hover{
 @media only screen and (max-width:600px){
     header{
         display: flex;
-        width:100%;
+        width: $anchoTotal;
         height:200px;
-        color: white;
+        color: $colorLetra;
 
             .navbar{
-            width: 100%;
+            width: $anchoTotal;
             height: 100%;
 
                 .navbar-nav{
                 list-style: none;
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                width: $anchoTotal;
                 height: 100%;
                 justify-content: space-evenly;
                 text-align: center;
                 align-items: center;
 
                     .nav-item{
-                    width: 100%;
+                    width: $anchoTotal;
                     height:20px;
                     font-size: 20px;
                     }
@@ -220,7 +238,7 @@ img:hover{
   
 
      img{
-        width: 100%;
+        width: $anchoTotal;
         height: 100%;
         }
 
@@ -234,11 +252,11 @@ img:hover{
         justify-items: center;
         align-items: center;
         height: 1000px;
-        width: 100%;
+        width: $anchoTotal;
 
         .mainImg{
             grid-area: img;
-            width: 100%;
+            width: $anchoTotal;
             height: 30%;
             display: flex;
             flex-direction: column;
@@ -247,7 +265,7 @@ img:hover{
             }
     }
 
-    h1{
+    .titulo{
         display: grid;
         grid-area: h1;
         justify-items: center;
@@ -258,15 +276,15 @@ img:hover{
 
 
     .fotos{
-        width: 100%;
+        width: $anchoTotal;
         height: 300px;
         }
 
     .galeria{
-        background-color: black;
-        color: white;
+        background-color: $colorFondo;
+        color: $colorLetra;
         height: 2600px;
-        width: 100%;
+        width: $anchoTotal;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 5% 95%;
