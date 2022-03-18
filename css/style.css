@@ -179,6 +179,7 @@ img:hover {
     height: 100%; }
   .main {
     background-image: url("../img/Fondo.jpeg");
+    background-repeat: cover;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 25% 75;
@@ -224,4 +225,20 @@ img:hover {
       align-items: center; }
       .galeria .imagenes .img {
         height: 30%;
-        width: 100%; } }
+        width: 100%; }
+  .contacto form #Descripción {
+    width: 70vw; }
+  .contacto form #Nombre {
+    width: 70vw; }
+  .contacto form #Telefono {
+    width: 70vw; }
+  .contacto form #Email {
+    width: 70vw; }
+  .contacto form #Evento {
+    width: 70vw; }
+  .contacto form .btn {
+    width: 40vw; }
+  .ayuda {
+    height: 800px; }
+    .ayuda #preguntas {
+      width: 80vw; } }

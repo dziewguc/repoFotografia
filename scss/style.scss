@@ -5,6 +5,16 @@ $anchoTotal: 100%;
 $colorLetra:white;
 $colorFondo: black;
 
+@mixin estiloContacto ($ancho){
+    width: $ancho;
+}
+
+
+@mixin estiloTitulo ($colorLetra, $tamanioLetra){
+    color: $colorLetra;
+    font-size: $tamanioLetra;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -87,11 +97,6 @@ li{
     height:50px;
     font-size: 30px;
     }
-
-@mixin estiloTitulo ($colorLetra, $tamanioLetra){
-    color: $colorLetra;
-    font-size: $tamanioLetra;
-}
 
 .main{
     background-image:url("../img/Fondo.jpeg");
@@ -244,6 +249,7 @@ img:hover{
 
     .main{
         background-image:url("../img/Fondo.jpeg");
+        background-repeat: cover;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 25% 75;
@@ -311,7 +317,35 @@ img:hover{
                                 
         }
 
+    .contacto{
+        form{
+            #Descripción{
+                @include estiloContacto(70vw);
+            }
+            #Nombre{
+                @include estiloContacto(70vw);
+            }
+            #Telefono{
+                @include estiloContacto(70vw);
+            }
+            #Email{
+                @include estiloContacto(70vw);
+            }
+            #Evento{
+                @include estiloContacto(70vw);
+            }
+            .btn{
+                width: 40vw;
+            }
+        }
+    }
 
+    .ayuda{
+        height: 800px;
+        #preguntas{
+            width: 80vw;
+        }
+    }
 
 
     
