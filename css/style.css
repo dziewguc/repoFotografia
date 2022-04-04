@@ -38,17 +38,22 @@ footer {
   background-color: black;
   color: white;
   width: 100%;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  position: relative; }
+  align-items: flex-end; }
   footer span {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    margin-bottom: 10px; }
     footer span .face {
-      display: flex;
-      justify-content: flex-end; }
+      position: relative; }
+      footer span .face .LogoFace {
+        width: 40px;
+        height: 40px; }
+    footer span .LogoInsta {
+      width: 50px;
+      height: 50px; }
 
 ul {
   list-style: none;
@@ -84,63 +89,80 @@ li {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center; }
-  .main .eventos {
+  .main #CuadroEventos .eventos {
+    width: 110%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    color: white; }
+    color: white;
+    background-color: black;
+    opacity: 70%; }
 
 .titulo, .galeria .tituloGaleria {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 20px;
-  font-size: 40px; }
+  top: 60px;
+  font-size: 40px;
+  color: black; }
 
 img:hover {
   transform: scale(1.2, 1.2); }
 
 .contacto {
-  background-color: black;
+  background-image: url(../img/Fondo.jpeg);
   color: white;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 1000px; }
   .contacto form {
-    height: 800px;
-    width: 100%;
+    height: 80%;
+    width: 90%;
     font-size: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 20px;
-    top: 30px;
-    align-content: center; }
+    left: 5%;
+    top: 60px;
+    align-content: center;
+    background-color: black;
+    opacity: 70%; }
     .contacto form #Descripción {
       height: 20%; }
     .contacto form .btn {
+      margin-top: 20px;
       font-size: 20px;
-      width: 10%; }
+      width: 20%; }
 
 .ayuda {
   height: 600px;
   width: 100%;
-  background-color: black;
+  background-image: url(../img/Fondo.jpeg);
   color: white; }
   .ayuda #preguntas {
     width: 600px;
-    height: 100%;
+    height: 400px;
     position: relative;
-    top: 70px;
-    font-size: 20px; }
+    top: 120px;
+    font-size: 20px;
+    background-color: black;
+    opacity: 70%; }
 
 .galeria {
   background-color: black;
   color: white;
-  height: 1000px;
+  height: 1200px;
   width: 100%; }
+  .galeria .tituloGaleria {
+    position: relative;
+    top: 60px;
+    color: white; }
   .galeria .imagenes {
+    margin-top: 450px;
+    height: 780px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 500px 500px 500px;
@@ -156,24 +178,26 @@ img:hover {
   header {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 300px;
     color: white; }
     header .navbar {
       width: 100%;
-      height: 100%; }
-      header .navbar .navbar-nav {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
-        text-align: center;
-        align-items: center; }
-        header .navbar .navbar-nav .nav-item {
+      height: 300px; }
+      header .navbar #navbarSupportedContent {
+        height: 200px; }
+        header .navbar #navbarSupportedContent .navbar-nav {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
           width: 100%;
-          height: 20px;
-          font-size: 20px; }
+          height: 100%;
+          justify-content: space-evenly;
+          text-align: center;
+          align-items: center; }
+          header .navbar #navbarSupportedContent .navbar-nav .nav-item {
+            width: 100%;
+            height: 20px;
+            font-size: 40px; }
   img {
     width: 100%;
     height: 100%; }
@@ -186,7 +210,7 @@ img:hover {
     grid-template-areas: "h1" "img";
     justify-items: center;
     align-items: center;
-    height: 1000px;
+    height: 1500px;
     width: 100%; }
     .main .mainImg {
       grid-area: img;
@@ -196,6 +220,16 @@ img:hover {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center; }
+  #Serv {
+    height: 500px; }
+    #Serv .eventos {
+      width: 110%;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      background-color: black;
+      opacity: 70%; }
   .titulo, .galeria .tituloGaleria {
     display: grid;
     grid-area: h1;
@@ -208,7 +242,7 @@ img:hover {
   .galeria {
     background-color: black;
     color: white;
-    height: 2600px;
+    height: 1600px;
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
@@ -217,27 +251,42 @@ img:hover {
     .galeria .tituloGaleria {
       grid-area: h1;
       position: relative;
-      top: 0px; }
+      top: 20px; }
     .galeria .imagenes {
       grid-area: img;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      margin-top: 50px; }
       .galeria .imagenes .img {
         height: 30%;
         width: 100%; }
-  .contacto form #Descripción {
-    width: 70vw; }
-  .contacto form #Nombre {
-    width: 70vw; }
-  .contacto form #Telefono {
-    width: 70vw; }
-  .contacto form #Email {
-    width: 70vw; }
-  .contacto form #Evento {
-    width: 70vw; }
-  .contacto form .btn {
-    width: 40vw; }
+  .contacto form {
+    height: 75%;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0px;
+    top: 10%;
+    align-content: center;
+    background-color: black;
+    opacity: 70%; }
+    .contacto form #Descripción {
+      width: 70vw; }
+    .contacto form #Nombre {
+      width: 70vw; }
+    .contacto form #Telefono {
+      width: 70vw; }
+    .contacto form #Email {
+      width: 70vw; }
+    .contacto form #Evento {
+      width: 70vw; }
+    .contacto form .btn {
+      width: 40vw; }
   .ayuda {
     height: 800px; }
     .ayuda #preguntas {

@@ -4,6 +4,7 @@
 $anchoTotal: 100%;
 $colorLetra:white;
 $colorFondo: black;
+$imagenFondo: url("../img/Fondo.jpeg");
 
 @mixin estiloContacto ($ancho){
     width: $ancho;
@@ -65,20 +66,30 @@ footer{
     background-color: $colorFondo;
     color: $colorLetra;
     width: $anchoTotal;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    position: relative;
 
     span{
         display: flex;
         flex-direction: row;
-        
+        margin-bottom: 10px;
+
         .face{
-            display: flex;
-            justify-content: flex-end;
+            position: relative;
+
+            .LogoFace{
+                width: 40px;
+                height: 40px;
+            }
         }
+
+        .LogoInsta{
+            width: 50px;
+            height: 50px;
+        }
+
     }
 }
 ul{
@@ -110,23 +121,32 @@ li{
 
         .tituloServicio{
             @include estiloTitulo (black, 40px)
-
         }
 
         .mainImg{
-        width: $anchoTotal;
-        height: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+            width: $anchoTotal;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
         }
 
-        .eventos{
-            display: flex;
-            flex-direction: column;
-            color: white;
-            }
+        #CuadroEventos{
+
+                .eventos{
+                    width: 110%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    color: white;
+                    background-color:black;
+                    opacity: 70%;
+                }
+
+        }
+
+        
 }
 
 .titulo{
@@ -134,8 +154,9 @@ li{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 20px;
+    top: 60px;
     font-size: 40px;
+    color: black;
 }
 
 img:hover{
@@ -143,59 +164,72 @@ img:hover{
 }
 
 .contacto{
-    background-color: $colorFondo;
+    background-image: url(../img/Fondo.jpeg);
     color: $colorLetra;
     display: flex;
     flex-direction: column;
+    height: 1000px;
 
         form{
-        height: 800px;
-        width: $anchoTotal;
+        height: 80%;
+        width: 90%;
         font-size: 30px;
         display: flex;
         flex-direction: column;
         justify-content:center;
         align-items: center;
         position: relative;
-        left: 20px;
-        top: 30px;
+        left: 5%;
+        top: 60px;
         align-content: center;
+        background-color:black;
+        opacity: 70%;
 
             #Descripción{
             height: 20%;
             }
 
             .btn{
+            margin-top: 20px;
             font-size: 20px;
-            width: 10%;
+            width: 20%;
             }
         }
 }
 
-.ayuda{height: 600px;
+.ayuda{
+    height: 600px;
     width: $anchoTotal;
-    background-color: $colorFondo;
+    background-image: url(../img/Fondo.jpeg);
     color: $colorLetra;
 
         #preguntas{
         width: 600px;
-        height: 100%;
+        height: 400px;
         position: relative;
-        top: 70px;
+        top: 120px;
         font-size: 20px;
+        background-color:black;
+        opacity: 70%;
         }
 }
 
-.galeria{background-color: $colorFondo;
+.galeria{
+    background-color: $colorFondo;
     color: $colorLetra;
-    height: 1000px;
+    height: 1200px;
     width: $anchoTotal;
 
         .tituloGaleria{
             @extend .titulo;
+            position: relative;
+            top: 60px;
+            color: white;
         }
 
         .imagenes{
+        margin-top: 450px;
+        height: 780px;   
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 500px 500px 500px;
@@ -215,29 +249,33 @@ img:hover{
     header{
         display: flex;
         width: $anchoTotal;
-        height:200px;
+        height:300px;
         color: $colorLetra;
 
             .navbar{
             width: $anchoTotal;
-            height: 100%;
+            height: 300px;
 
-                .navbar-nav{
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                width: $anchoTotal;
-                height: 100%;
-                justify-content: space-evenly;
-                text-align: center;
-                align-items: center;
+                #navbarSupportedContent{
+                    height: 200px;
 
-                    .nav-item{
+                    .navbar-nav{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
                     width: $anchoTotal;
-                    height:20px;
-                    font-size: 20px;
+                    height: 100%;
+                    justify-content: space-evenly;
+                    text-align: center;
+                    align-items: center;
+
+                        .nav-item{
+                        width: $anchoTotal;
+                        height:20px;
+                        font-size: 40px;
+                        }
                     }
-                }
+                }    
             }      
         }
   
@@ -257,9 +295,9 @@ img:hover{
                              "img";
         justify-items: center;
         align-items: center;
-        height: 1000px;
+        height: 1500px;
         width: $anchoTotal;
-
+        
         .mainImg{
             grid-area: img;
             width: $anchoTotal;
@@ -270,6 +308,21 @@ img:hover{
             align-items: center;
             }
     }
+
+    #Serv{
+        height: 500px;
+
+        .eventos{
+            width: 110%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background-color:black;
+            opacity: 70%;
+        }
+
+}
 
     .titulo{
         display: grid;
@@ -289,7 +342,7 @@ img:hover{
     .galeria{
         background-color: $colorFondo;
         color: $colorLetra;
-        height: 2600px;
+        height: 1600px;
         width: $anchoTotal;
         display: grid;
         grid-template-columns: 100%;
@@ -300,7 +353,7 @@ img:hover{
                         .tituloGaleria{
                         grid-area: h1;
                         position: relative;
-                        top:0px;
+                        top:20px;
                         }
 
                         .imagenes{
@@ -308,6 +361,7 @@ img:hover{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        margin-top: 50px;
 
                             .img{
                             height: 30%;
@@ -316,38 +370,55 @@ img:hover{
                         }
                                 
         }
-
+        
     .contacto{
+
         form{
-            #Descripción{
-                @include estiloContacto(70vw);
-            }
-            #Nombre{
-                @include estiloContacto(70vw);
-            }
-            #Telefono{
-                @include estiloContacto(70vw);
-            }
-            #Email{
-                @include estiloContacto(70vw);
-            }
-            #Evento{
-                @include estiloContacto(70vw);
-            }
-            .btn{
-                width: 40vw;
-            }
+            height: 75%;
+            width: 100%;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            position: relative;
+            left: 0px;
+            top: 10%;
+            align-content: center;
+            background-color:black;
+            opacity: 70%;
+
+                #Descripción{
+                    @include estiloContacto(70vw);
+                }
+
+                #Nombre{
+                    @include estiloContacto(70vw);
+                }
+
+                #Telefono{
+                    @include estiloContacto(70vw);
+                }
+
+                #Email{
+                    @include estiloContacto(70vw);
+                }
+
+                #Evento{
+                    @include estiloContacto(70vw);
+                }
+
+                .btn{
+                    width: 40vw;
+                }
         }
     }
 
     .ayuda{
         height: 800px;
-        #preguntas{
-            width: 80vw;
-        }
+
+            #preguntas{
+                width: 80vw;
+            }
     }
-
-
-    
-
 }
